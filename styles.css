@@ -24,7 +24,7 @@ a {
   align-items: center;
 }
 
-.hero {
+#hero {
   background-image: url(img/hero-bg.png);
   background-size: cover;
   background-position: top center;
@@ -70,19 +70,20 @@ a {
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 .hero h1:nth-child(1) {
-  animation-delay: 1.5;
+  animation-delay: 1s;
 }
 
 .hero h1:nth-child(2) {
-  animation-delay: 2.5;
+  animation-delay: 2s;
 }
 
 .hero h1:nth-child(3) {
-  animation-delay: 3.5;
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
 }
 
 .hero h1 span {
@@ -93,19 +94,84 @@ a {
   width: 0;
   background-color: crimson;
   animation: text_reveal_box 1s ease;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
 .hero h1:nth-child(1) span {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 .hero h1:nth-child(2) span {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 .hero h1:nth-child(3) span {
-  animation-delay: 3s;
+  animation-delay: 2.5s;
 }
+
+#hero .hero {
+  max-width: 1200px;
+  padding: 0px 150px;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+/* service section */
+
+#services {
+}
+
+#services .services {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+
+#services .section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin-top: 425px;
+}
+
+#services .section-title span {
+  color: crimson;
+}
+
+#services .service-top p {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+}
+
+#services .service-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#services .service-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background-image: url(./img/img-1.png);
+  background-size: cover;
+  margin: 10px 5%;
+}
+
+/* end of service section */
 
 @keyframes text_reveal_box {
   50% {
@@ -121,5 +187,12 @@ a {
 @keyframes text_reveal {
   100% {
     color: white;
+  }
+}
+
+@keyframes text_reveal_name {
+  100% {
+    color: crimson;
+    font-weight: 4rem;
   }
 }
